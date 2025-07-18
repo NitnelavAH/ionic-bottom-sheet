@@ -1,7 +1,7 @@
 {
-  "name": "ion-bottom-sheet-forked",
-  "version": "2.0.6",
-  "description": "A simple bottom sheet for ionic 4",
+  "name": "ion-bottom-sheet2",
+  "version": "15.0.2",
+  "description": "A simple bottom sheet for ionic 6+",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "files": [
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarboniDavide/ion-bottom-sheet.git"
+    "url": "git+https://github.com/NitnelavAH/ionic-bottom-sheet.git"
   },
   "keywords": [
     "ionic",
@@ -24,11 +24,16 @@
     "sheet"
   ],
   "author": "Davide Carboni",
+  "maintainers": [
+    {
+      "name": "Valentin Abundo"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CarboniDavide/ion-bottom-sheet/issues"
+    "url": "https://github.com/NitnelavAH/ionic-bottom-sheet/issues"
   },
-  "homepage": "https://github.com/CarboniDavide/ion-bottom-sheet#readme",
+  "homepage": "https://github.com/NitnelavAH/ionic-bottom-sheet#readme",
   "devDependencies": {
     "@angular-devkit/schematics": "^15.2.7",
     "@angular/common": "^15.2.8",
@@ -46,5 +51,8 @@
     "rxjs": "^7.8.1",
     "typescript": "^4.8.2",
     "zone.js": "^0.13.0"
+  },
+  "directories": {
+    "doc": "doc"
   }
 }
