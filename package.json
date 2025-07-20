@@ -1,6 +1,6 @@
 {
   "name": "ion-bottom-sheet2",
-  "version": "16.0.0",
+  "version": "17.0.3",
   "description": "A simple bottom sheet for ionic 6+",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -35,22 +35,22 @@
   },
   "homepage": "https://github.com/NitnelavAH/ionic-bottom-sheet#readme",
   "devDependencies": {
-    "@angular-devkit/schematics": "^16.2.0",
-    "@angular/common": "^16.2.0",
-    "@angular/compiler": "^16.2.0",
-    "@angular/compiler-cli": "^16.2.0",
-    "@angular/core": "^16.2.0",
-    "@angular/forms": "^16.2.0",
-    "@angular/platform-browser": "^16.2.0",
-    "@angular/platform-browser-dynamic": "^16.2.0",
-    "@angular/router": "^16.2.0",
+    "@angular-devkit/schematics": "^17.3.4",
+    "@angular/common": "^17.3.4",
+    "@angular/compiler": "^17.3.4",
+    "@angular/compiler-cli": "^17.3.4",
+    "@angular/core": "^17.3.4",
+    "@angular/forms": "^17.3.4",
+    "@angular/platform-browser": "^17.3.4",
+    "@angular/platform-browser-dynamic": "^17.3.4",
+    "@angular/router": "^17.3.4",
     "@ionic/angular": "^7.0.4",
     "@types/hammerjs": "^2.0.36",
     "@types/node": "^20.4.2",
     "hammerjs": "^2.0.8",
     "rxjs": "^7.8.1",
-    "typescript": "^5.1.3",
-    "zone.js": "^0.13.0"
+    "typescript": "^5.2.2",
+    "zone.js": "^0.14.3"
   },
   "directories": {
     "doc": "doc"

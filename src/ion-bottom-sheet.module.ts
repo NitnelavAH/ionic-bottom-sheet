@@ -3,7 +3,7 @@ import { IonBottomSheetComponent } from "./components/ion-bottom-sheet.component
 import { IonBottomSheetProvider } from "./providers/ion-bottom-sheet-provider";
 
 @NgModule({
-  declarations: [IonBottomSheetComponent],
+  imports: [IonBottomSheetComponent], // Use imports for standalone
   exports: [IonBottomSheetComponent],
 })
 export class IonBottomSheetModule {

@@ -77,7 +77,7 @@ Use it in your component template like this:
     .....
 <ion-content>
 
-<ion-bottom-sheet2 
+<ion-bottom-sheet 
     [(state)]="sheetState" 
     [minHeight]="minHeight" 
     [dockedHeight]="dockedHeight"
@@ -90,7 +90,7 @@ Use it in your component template like this:
     [transition]="transition"
   >
   .....
-</ion-bottom-sheet2>
+</ion-bottom-sheet>
 ```
 
 # License

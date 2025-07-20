@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "module": "es2015",
-    "target": "es5",
+    "module": "es2020",
+    "target": "es2020",
     "moduleResolution": "node",
     "sourceMap": true,
     "inlineSources": true,
     "declaration": true,
-    "noImplicitAny": false,
+    "strict": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"],
+    "skipLibCheck": true,
+    "lib": [
+      "dom",
+      "es2020"
+    ],
     "outDir": "dist"
   },
   "exclude": [
@@ -17,7 +21,8 @@
     "scripts"
   ],
   "angularCompilerOptions": {
-    "skipTemplateCodegen": true,
-    "enableResourceInlining": true
+    "compilationMode": "partial",
+    "enableResourceInlining": true,
+    "strictTemplates": true
   }
 }
