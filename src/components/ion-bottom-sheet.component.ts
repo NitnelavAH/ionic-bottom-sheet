@@ -6,7 +6,8 @@ import * as Hammer from 'hammerjs';
 @Component({
   selector: 'ion-bottom-sheet',
   templateUrl: './ion-bottom-sheet.component.html',
-  styleUrls: ['./ion-bottom-sheet.component.scss']
+  styleUrls: ['./ion-bottom-sheet.component.scss'],
+  standalone: false,
 })
 export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
   @Input() dockedHeight: number = 200;
