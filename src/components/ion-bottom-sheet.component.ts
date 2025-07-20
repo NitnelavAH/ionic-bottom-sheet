@@ -7,7 +7,8 @@ import * as Hammer from 'hammerjs';
   selector: 'ion-bottom-sheet',
   templateUrl: './ion-bottom-sheet.component.html',
   styleUrls: ['./ion-bottom-sheet.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [], // Add any required modules here, e.g., CommonModule, IonicModule
 })
 export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
   @Input() dockedHeight: number = 200;
@@ -40,7 +41,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
   
   @Output() stateChange: EventEmitter<SheetState> = new EventEmitter<SheetState>();
 
-  private _startPosition: number;
+  private _startPosition!: number;
   private _startScroll: number = 0;
   private _sheetTopAnimationHasBeenPerformed: Boolean = false;
   private _bottomShadowHeaderHasBeenPerformed: Boolean = false;
@@ -216,7 +217,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     }
   }
 
-  private _cssSwitchClass(entryClassName, exitClassName, selector) {
+  private _cssSwitchClass(entryClassName: string, exitClassName: string, selector: HTMLBaseElement) {
     this._cssRemoveClass(exitClassName, selector);
     this._cssAddClass(entryClassName, selector);
   }
@@ -284,7 +285,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     }
   }
  
-  private _setTranslateY(value) {
+  private _setTranslateY(value: string) {
     this._setStyle('transform', 'translateY(' + value + ')', this._element.nativeElement);
   }
 
@@ -302,7 +303,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     this._restoreNativeContentSize();
   }
 
-  private _onHeaderGestureEnd(ev, dyInitial=0){
+  private _onHeaderGestureEnd(ev: HammerInput, dyInitial=0){
     if (!this.canBounce) { return; }
 
     if ( Math.abs(ev.deltaY-dyInitial) > this.bounceDelta){
@@ -313,7 +314,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     }
   }
 
-  private _onHeaderGestureMove(ev, dyInitial=0){
+  private _onHeaderGestureMove(ev: HammerInput, dyInitial=0){
     let nextYposition = this._startPosition + ev.deltaY - dyInitial;
 
     if ( (nextYposition <= this._getPosition(SheetState.Top) ) && ( (ev.deltaY - dyInitial) < 0) ){
@@ -334,7 +335,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     this._startScroll = this._element.nativeElement.querySelector("#ibs-content-inner").scrollTop;
   }
 
-  private _onContentGestureEnd(ev){
+  private _onContentGestureEnd(ev: HammerInput){
     if (!this._scrollContent && !this.disableDrag) { 
       this._onHeaderGestureEnd(ev, this._dyInitialScrollDown); 
       this._scrollContent = true;
@@ -353,7 +354,7 @@ export class IonBottomSheetComponent implements AfterViewInit, OnChanges {
     this._element.nativeElement.querySelector("#ibs-content-inner").scroll({ top: nextScroll, behavior: this.useSmoothScrolling ? 'smooth' : 'auto'});
   }
 
-  private _onContentGestureMove(ev){
+  private _onContentGestureMove(ev: HammerInput){
     if (!this._scrollContent && !this.disableDrag) { this._onHeaderGestureMove(ev, this._dyInitialScrollDown); return; }
 
     // get Delta Y before scrolling
