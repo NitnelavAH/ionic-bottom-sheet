@@ -1,6 +1,6 @@
 {
   "name": "ion-bottom-sheet2",
-  "version": "17.0.2",
+  "version": "17.0.3",
   "description": "A simple bottom sheet for ionic 6+",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
