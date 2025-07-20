@@ -1,10 +1,10 @@
-# Ion 4 Bottom Sheet [(show in live demo)](https://carbonidavide.github.io/ion-bottom-sheet)
+# Forked from oiginal ion-bottom-sheet (https://carbonidavide.github.io/ion-bottom-sheet)
 
-Bottom sheet component for Ionic 4.
+Bottom sheet component for Ionic 6+.
 
 # How to Install
 ```
-  $ npm i ion-bottom-sheet --save
+  $ npm i ion-bottom-sheet2 --save
 ```
 
 # Dependencies
@@ -58,7 +58,7 @@ $ npm i @types/hammerjs
 First, import the IonBottomSheetModule to your app:
 
 ```typescript
-import { IonBottomSheetModule } from 'ion-bottom-sheet';
+import { IonBottomSheetModule } from 'ion-bottom-sheet2';
 
 @NgModule({
   imports: [
@@ -77,7 +77,7 @@ Use it in your component template like this:
     .....
 <ion-content>
 
-<ion-bottom-sheet 
+<ion-bottom-sheet2 
     [(state)]="sheetState" 
     [minHeight]="minHeight" 
     [dockedHeight]="dockedHeight"
@@ -90,7 +90,7 @@ Use it in your component template like this:
     [transition]="transition"
   >
   .....
-</ion-bottom-sheet>
+</ion-bottom-sheet2>
 ```
 
 # License
